@@ -20,3 +20,17 @@ Your site is live at https://xxxxxxxxxxxxxx.xxx/
 Last deployed by <github_username> 
 
 ```
+
+## Requirements
+
+You need to install the following softwares/binary:
+
+MUST:
+
+- [`quarto`](https://docs.posit.co/resources/install-quarto/)
+
+Optional:
+
+- [`Rstudio`](https://posit.co/download/rstudio-desktop/)
+- [`VSCode`](https://code.visualstudio.com/Download) 
+- Make (if you wish to use makefile)
