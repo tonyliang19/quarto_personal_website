@@ -1,19 +1,145 @@
+###############################################################################
+# This is the file to control all global options/parameters for your website,
+# feel free to UNCOMMENT any line that you think is useful. Note, some of 
+# these options could be overriden per file, with the following priority:
+# 1. *qmd (specific file)
+# 2. _quarto.yml
+# For more information please check out the official documentation from
+# Quarto at https://quarto.org/docs/websites/#config-file
+# 
+# This template is made by Tony Liang , licensed under GPL3
+# NOTE:
+# ALL INDENTATION BELOW MATTERS !!!!!!!!!
+# Go head and try making up your first personal website
+
+# Generic for all project
 project:
   type: website
 
+
+# Use bibliography or not (bibtex format mostly)
+# could use multiple bibliography
+#bibliography: references.bib
+
+# All options in website (html)
 website:
-  title: "quarto_personal_website"
+  # Next and previous article links in footer
+  page-navigation: true
+  # Website title, applies to all links of the website
+  # At a format of title -- other_site_name
+  title: "My personal website"
+  # Search bar on the site
+  search: false
+
+  # The two options are bundled to allow actions to the url listed
+  #repo-url: https://github.com/your_gh_username/website_name.github.io/
+  #repo-actions: [edit, issue] 
+
+  # Back to Top button, by default is false in quarto
+  #back-to-top-navigation: true
+
+  # Navigation Tools
   navbar:
+    # Collapse the navbar into a menu when the display becomes narrow.
+    #collapse: true
+    # Show the navbar (keeping it pinned).
+    #pinned: true
+    # Color could be hex or named , primary refere to the one defined in css theme
+    background: primary
+    
+    # You could combine navbar to have some elements in left
+    # and other elements from right
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+    
+    # I would have icons to show social media
+    #right:
+      #- href: 'https://www.linkedin.com/in/tonyliang19'
+      #  text: "{{< iconify fa6-brands linkedin >}}"
+      #- href: 'https://github.com/tonyliang19'
+      #  text: "{{< iconify fa6-brands github >}}"
+      #- href: 'https://www.instagram.com/tonyliang19/'
+      #  text: "{{< iconify fa6-brands instagram >}}"
+  
 
+  # Page footer to appear on all site
+  #page-footer:
+    # Footer border (true, false, or a border color)
+    #border: true
+    # Position of footer, I used right
+    #right: "© 2023, Tony Liang"
+
+  
+  # Side navigation for specific qmd files
+  # Eg. when you want to have a directory that contain many qmds, 
+  # then using sidebar could be helpful to distinguish each
+  #sidebar:
+  # dropdown for demos
+
+  # identifier for sidebar
+  #- id: some_name
+    #pinned: true
+    #title:  ""
+    # docked or floating sidebar
+    #style:  # "docked" # "floating"
+    # Named color or hex color
+    #background: light
+    # The depth at which the sidebar contents should be collapsed by default.
+    #collapse-level: 1
+    # Where to get contents of this sidebar
+    #contents: some_directory_name/**
+
+# Controlling htmls formatting (code, font size, toc, many more)
+# Many of these options could be overriden in some website that you
+# wish to have custom behaviors
+# i.e. you want to have a page that has extra large text
+# i.e. you want to fold all codes of a website if there are many 
+# long code blocks, whereas rest of your website might not have at all
 format:
   html:
-    theme: cosmo
+    # Control to show as border for code block
+    #code-block-border-left: "#31BAE9"
+    # Show background in your code blocks (default is false)
+    #code-block-bg: true
+    # Copy code button 
+    # hover -- show when mouse hover over button 
+    # true -- always show button
+    # false -- not show button
+    #code-copy: hover
+    # Folding codes
+    #code-fold: true
+    # Summary text to show when combined to use with `code-fold`
+    #code-summary: "Show the code"
+    # Includes a tooling menu at top of a website to show/hide all
+    # code or show source code that used to make that website
+    #code-tools: true
+    # Input of your css style sheets
     css: styles.css
-    toc: true
+    # Change size for text here
+    fontsize: 1.2em 
+    # Change highlight style of code
+    #highlight-style: github
+    # Opens URL links from your website in new window
+    #link-external-newwindow: true
+    # Show icon next to links that leave the current site.
+    #link-external-icon: true
+    # Using table of contents or not
+    # Many suboptions for toc, like collapse-level
+    #toc: true
+    # Optional to have number in sections, combine usage with `toc`
+    # number-sections: true
+    # Bootstrap themes for your website
+    # You could supply custom themes as well, or use their template
+    # themes from https://bootswatch.com/
+    # Simply, go to the link above, and find your interested theme
+    # and write its lowercase name 
+    # .i.e. Cyborg --> cyborg || Litera ---> litera
+    theme:
+      # You could use one theme only or have two themes (one for light mode, one dark mode)
+      light: flatly
+      dark:  darkly #solar 
 
-
-
+# If you wish to know more about the author, you could visit the link below:
+# https://tonyliang19.github.io/ ©2023, Tony Liang
