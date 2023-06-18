@@ -33,4 +33,4 @@ Optional:
 
 - [`Rstudio`](https://posit.co/download/rstudio-desktop/)
 - [`VSCode`](https://code.visualstudio.com/Download) 
-- Make (if you wish to use makefile)
+- Make (if you wish to use the makefile in this repo)
